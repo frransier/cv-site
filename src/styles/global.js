@@ -8,7 +8,7 @@ export default css.global`
   body {
     font-family: "Poppins", sans-serif;
     color: ${theme.colors.text};
-    font-size: 10px;
+    font-size: 14px;
   }
   body,
   h1,
@@ -18,12 +18,13 @@ export default css.global`
   p,
   input,
   ul {
-    margin: 0;
+    margin: 4;
     padding: 0;
+    line-height: 2;
   }
   a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: underline;
+    color: blue;
     cursor: pointer;
   }
   ul,
