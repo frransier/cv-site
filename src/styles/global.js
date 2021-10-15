@@ -8,7 +8,7 @@ export default css.global`
   body {
     font-family: "Poppins", sans-serif;
     color: ${theme.colors.text};
-    font-size: 14px;
+    font-size: 15px;
   }
   body,
   h1,

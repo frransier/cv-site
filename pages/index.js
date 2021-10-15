@@ -4,7 +4,6 @@ import Sidebar from "../src/components/sidebar";
 import { get } from "../src/lib/fetch";
 
 export default function Home({ data }) {
-  console.log(data);
   return (
     <main
       css={{
@@ -23,10 +22,6 @@ export default function Home({ data }) {
         <Sidebar stack={data.stack} education={data.education} />
         <Resume about={data.about} jobs={data.jobs} projects={data.projects} />
       </div>
-      {/* <Experience /> */}
-      {/* <Skills /> */}
-      {/* <About /> */}
-      {/* <Footer /> */}
     </main>
   );
 }

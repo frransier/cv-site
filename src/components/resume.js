@@ -1,3 +1,4 @@
+import Jobs from "./jobs";
 import Projects from "./projects";
 import Tags from "./tags";
 
@@ -20,17 +21,7 @@ export default function Resume({ jobs, projects, about }) {
       <h1>About Me</h1>
       <p>{about}</p>
       <h1>Work experience</h1>
-      {jobs.map((j) => (
-        <div key={j.title}>
-          <h3>{j.title}</h3>
-          <div>
-            {j.start} - {j.end}
-          </div>
-          <div>{j.company.name}</div>
-          <p>{j.description}</p>
-          <Tags tags={j.roles} />
-        </div>
-      ))}
+      <Jobs jobs={jobs} />
       <h1>Projects I Have Built</h1>
       <Projects projects={primaryProjects} />
       <h1>Projects I Have Worked on</h1>

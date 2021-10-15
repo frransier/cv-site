@@ -4,14 +4,21 @@ export default function Projects({ projects }) {
   return (
     <ul>
       {projects.map((p) => (
-        <li key={p.title}>
+        <li
+          css={{
+            "@media print": {
+              pageBreakInside: "avoid",
+            },
+          }}
+          key={p.title}
+        >
           <h3 css={{ marginBottom: 0 }}>{p.title}</h3>
-          <a css={{ margin: 0 }} href={p.url}>
+          <a css={{ margin: 0 }} href={`https://${p.url}`} target="_blank">
             {p.url}
           </a>
           <p>{p.description}</p>
-          <Tags alt tags={p.stack} />
-          <Tags tags={p.roles} />
+          <Tags tags={p.stack} />
+          <Tags alt tags={p.roles} />
         </li>
       ))}
     </ul>
